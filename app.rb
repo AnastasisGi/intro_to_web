@@ -14,7 +14,11 @@ get '/ellen' do
   'Hello, Ellen'
 end
 
-get '/named-cat' do
+get '/cat-name-form' do
+  erb(:catform)
+end
+
+post '/named-cat' do
   p params
   @name = params[:name]
   erb(:index)
